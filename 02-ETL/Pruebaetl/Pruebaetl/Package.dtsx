@@ -1,0 +1,925 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/5/2024 5:22:31 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="GALLARDOMSI"
+  DTS:CreatorName="GALLARDOMSI\jlgallardoadmon"
+  DTS:DTSID="{0D7228B5-7545-41B6-A10F-D20A2C8F177C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{CA97982A-1F93-4CAD-9480-F01025665EC8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[.,1435.NORTHWND.sa1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EB8FA772-F8AF-419D-B5C7-88628F853D26}"
+      DTS:ObjectName=".,1435.NORTHWND.sa1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.,1435;User ID=sa;Initial Catalog=NORTHWND;Provider=MSOLEDBSQL.1;Persist Security Info=True;Application Name=SSIS-Package-{EB8FA772-F8AF-419D-B5C7-88628F853D26}.,1435.NORTHWND.sa1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlbiUQso1GkO2F5GRARmwQQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABkWtbO/zUJ+I1okToF6lbBUPGhk28so2w8GV3xOlCdjQAAAAAOgAAAAAIAACAAAACWlYv16w2Oqric6yOODX0PDSxxGeeQsxOt9ymfeeN6JyAAAABmB1s7ett3YVPwNTEa18oopzZm8OoNo6WEhFCkmUiBhEAAAAARdZZ2goB++pqBtgh2Tz9Wmkhbus+ds5COoLlBvluwwVKE2zcglt2v+AJCYw+y3Jt8RRQHgNIsdlt7AyzbPpiA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Reporte clientes]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5F1DF617-84A9-4023-98F9-D5242AF1F5A9}"
+      DTS:ObjectName="Reporte clientes">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\uttt\Cuatrimestresep-dic2024\Inteligencia de Negocios\BI\02-ETL\Reportes\Reporte_clientes.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerID"
+              DTS:DTSID="{3C723FB3-8A5A-4985-A5E2-4C15554B1369}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="40"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CompanyName"
+              DTS:DTSID="{AEE3F91D-E420-4710-9DA7-2923CF1A0FC8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContactName"
+              DTS:DTSID="{5DAB88A0-4F25-410E-BF9C-011963108F0F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ContactTitle"
+              DTS:DTSID="{44AC5E43-F383-46FC-B38C-E88B779E24F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address"
+              DTS:DTSID="{D619E608-1508-47E6-9DE1-34E2E5059B60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{65F443B6-5803-49C2-A6B5-7560979C172F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{551A198E-0C0A-416D-9746-60421350BA75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PostalCode"
+              DTS:DTSID="{B8879C4D-CF16-4040-B7A3-4AD4E0328ECA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{A1569B20-0267-481F-A9AC-96E957F38644}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Phone"
+              DTS:DTSID="{C6254F3C-0F87-4E63-802E-6B4EB6B6E77E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fax"
+              DTS:DTSID="{8A5963D0-313D-41FC-B4A0-DBF2A201871B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Reporte Empleados]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BA06A04C-2778-4D69-886B-DB7D74F5D5CF}"
+      DTS:ObjectName="Reporte Empleados">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\uttt\Cuatrimestresep-dic2024\Inteligencia de Negocios\BI\02-ETL\Reportes\Reporte_empleados.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmployeeID"
+              DTS:DTSID="{CE8F4326-CAF6-462F-B74A-6D8FB153E08A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{B3F103BA-7E5B-4967-A05A-9FFF6D876A4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{D6F4805D-F443-49F7-9034-3F918E56192A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Title"
+              DTS:DTSID="{DDEEC756-0BDE-4DD0-987A-593A713D8A17}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="25"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TitleOfCourtesy"
+              DTS:DTSID="{D50F9788-B4A4-4818-ACA1-C14DDB64BFAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BirthDate"
+              DTS:DTSID="{65C2D679-656B-4341-B5CC-273E6FC07EA3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HireDate"
+              DTS:DTSID="{0C8FEC8B-E9CD-4384-88DE-1195CC0251F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="60"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address"
+              DTS:DTSID="{2A857675-0817-4BB5-BFD9-C188B03375CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{A69BFBFF-3523-4C00-AA79-031C81E90057}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{8227C810-B6BF-4F90-8C82-C7B9E8E52886}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PostalCode"
+              DTS:DTSID="{626287D0-1B15-4502-AEB8-DD316D92F12E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{E8DA8662-8311-41BD-8624-FF966B620861}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HomePhone"
+              DTS:DTSID="{920FE065-326C-487D-BAF3-DE28383DFD4C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Extension"
+              DTS:DTSID="{170FED9E-4762-45FD-99B6-63190AA81091}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="301"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Photo"
+              DTS:DTSID="{62649CE3-F2BA-4386-BAA8-B87D5E8F77FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="303"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Notes"
+              DTS:DTSID="{0C583CBB-9DD4-4AD5-BDD8-1D27C624497C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ReportsTo"
+              DTS:DTSID="{C061D64F-DE96-46B9-A9FF-BCE58BEC8BA2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PhotoPath"
+              DTS:DTSID="{5773301C-5994-4150-9B91-1A69099FDE86}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Consultar Tabla Employees"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{02F2CF4E-B30F-4DBE-9EC3-2D8139565601}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Consultar Tabla Employees"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Consultar Tabla Employees\Destino de archivo plano"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de archivo plano;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de archivo plano"
+              localeId="3082"
+              name="Destino de archivo plano"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si los datos sobrescriben el archivo de destino o se anexan al mismo."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica el texto para escribir en el archivo de destino antes de escribir ningún dato."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Cuando el calificador de texto está habilitado, especifica si este contendrá secuencias de escape o no en los datos escritos en el archivo de destino."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Consultar Tabla Employees\Destino de archivo plano.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Reporte clientes]"
+                  connectionManagerRefId="Package.ConnectionManagers[Reporte clientes]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+                  hasSideEffects="true"
+                  name="Entrada de destino de archivo plano">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[CustomerID]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[CustomerID]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[CompanyName]"
+                      cachedDataType="wstr"
+                      cachedLength="40"
+                      cachedName="CompanyName"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[CompanyName]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[CompanyName]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[ContactName]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactName"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[ContactName]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[ContactName]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[ContactTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="ContactTitle"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[ContactTitle]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[ContactTitle]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Address"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Address]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[City]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Region]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[PostalCode]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Country]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Phone"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Phone]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].Columns[Fax]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Fax"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Fax]"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Fax]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[CustomerID]"
+                      dataType="wstr"
+                      length="5"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactName" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="15"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Consultar Tabla Employees\Northwind"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Northwind"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Consultar Tabla Employees\Northwind.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[.,1435.NORTHWND.sa1]"
+                  connectionManagerRefId="Package.ConnectionManagers[.,1435.NORTHWND.sa1]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[CustomerID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[CustomerID]"
+                      length="5"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[CompanyName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[CompanyName]"
+                      length="40"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[CompanyName]"
+                      name="CompanyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[ContactName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[ContactName]"
+                      length="30"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[ContactName]"
+                      name="ContactName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[ContactTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[ContactTitle]"
+                      length="30"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[ContactTitle]"
+                      name="ContactTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Address]"
+                      length="60"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[City]"
+                      length="15"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Region]"
+                      length="15"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[PostalCode]"
+                      length="10"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Country]"
+                      length="15"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Phone]"
+                      length="24"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Phone]"
+                      name="Phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Fax]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Fax]"
+                      length="24"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].Columns[Fax]"
+                      name="Fax"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[CustomerID]"
+                      dataType="wstr"
+                      length="5"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactName" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      name="ContactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      name="Address" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="15"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[CustomerID]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[CompanyName]"
+                      dataType="wstr"
+                      length="40"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[CompanyName]"
+                      name="CompanyName" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[ContactName]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[ContactName]"
+                      name="ContactName" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[ContactTitle]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[ContactTitle]"
+                      name="ContactTitle" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Address]"
+                      name="Address" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[City]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Phone]"
+                      name="Phone" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[Fax]"
+                      name="Fax" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Consultar Tabla Employees.Paths[Salida de origen de OLE DB]"
+              endId="Package\Consultar Tabla Employees\Destino de archivo plano.Inputs[Entrada de destino de archivo plano]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Consultar Tabla Employees\Northwind.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="206.4,41.6"
+          Id="Package\Consultar Tabla Employees"
+          TopLeft="334.423058651006,58.3333329276906" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Consultar Tabla Employees">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\Consultar Tabla Employees\Northwind"
+          TopLeft="309.785709669548,44.4285707665341" />
+        <NodeLayout
+          Size="192.8,41.6"
+          Id="Package\Consultar Tabla Employees\Destino de archivo plano"
+          TopLeft="280.999995812774,175.499997384846" />
+        <EdgeLayout
+          Id="Package\Consultar Tabla Employees.Paths[Salida de origen de OLE DB]"
+          TopLeft="374.992852741161,86.0285707665341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,89.4714266183121"
+              Start="0,0"
+              End="0,81.9714266183121">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,81.9714266183121" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Consultar Tabla Employees\Northwind">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
