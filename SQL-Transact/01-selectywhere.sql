@@ -408,11 +408,75 @@ from NORTHWND.dbo.Categories as ca
 inner join NORTHWND.dbo.Products as p
 on ca.CategoryID = p.CategoryID;
 
+-- Left Join 
+
+use stagenorthwind;
+
+select * from categoriesstage
+
+select * from ProductsStage
+
+select * from 
+categoriesstage as ce
+inner join ProductsStage as ps
+on ce.Categoriaid = ps.categoriaid;
+
+select * from 
+categoriesstage as ce
+left join ProductsStage as ps
+on ce.Categoriaid = ps.categoriaid
+
+insert into categoriesstage (Nombrecategoria)
+values('Drinks')
+
+insert into ProductsStage 
+(Nombreproducto, precioUnitario, stock, categoriaid)
+values ('Michelada TL', 6.5, 345,9);
 
 
-select * from stagenorthwind.dbo.ProductsStage
+-- RIGHT JOIN
+insert into ProductsStage
+(Nombreproducto, precioUnitario, stock, categoriaid)
+values ('Refrigerador', 45000, 34,null);
+
+select * from ProductsStage
+
+select * from 
+categoriesstage as ce
+inner join ProductsStage as ps
+on ce.Categoriaid = ps.categoriaid;
+
+select * from 
+categoriesstage as ce
+Right join ProductsStage as ps
+on ce.Categoriaid = ps.categoriaid
 
 
+-- FULL JOIN
+
+insert into categoriesstage (Nombrecategoria)
+values('VIP');
+
+select * from 
+categoriesstage as ce
+inner join ProductsStage as ps
+on ce.Categoriaid = ps.categoriaid;
+
+select * from 
+categoriesstage as ce
+left join ProductsStage as ps
+on ce.Categoriaid = ps.categoriaid;
+
+select * from 
+categoriesstage as ce
+right join ProductsStage as ps
+on ce.Categoriaid = ps.categoriaid;
+
+
+select * from 
+categoriesstage as ce
+full join ProductsStage as ps
+on ce.Categoriaid = ps.categoriaid;
        
 
 
